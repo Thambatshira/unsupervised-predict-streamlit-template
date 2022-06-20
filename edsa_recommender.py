@@ -25,6 +25,10 @@
 	https://docs.streamlit.io/en/latest/
 
 """
+pip install streamlit
+pip install utils
+pip install recommenders
+
 # Streamlit dependencies
 import streamlit as st
 
@@ -79,8 +83,8 @@ def main():
                     for i,j in enumerate(top_recommendations):
                         st.subheader(str(i+1)+'. '+j)
                 except:
-                    st.error("Oops! Looks like this algorithm does't work.\
-                              We'll need to fix it!")
+                    st.error:
+			print("Unknown Selection. Please select one the displayed options")
 
 
         if sys == 'Collaborative Based Filtering':
@@ -104,9 +108,14 @@ def main():
         st.title("Solution Overview")
         st.write("Describe your winning approach on this page")
 
-    # You may want to add more sections here for aspects such as an EDA,
-    # or to provide your business pitch.
+    elif page_selection == "Exploratory Data Analyis":
+        st.title("Exploratory Data Analyis")
+        st.write("Describe your EDA methodology on this page")
+        
+    elif page_selection == "Model Training":
+        st.title("Model Training")
+        st.write("Describe your Model Training approach on this page").
 
 
-if __name__ == '__main__':
+if page_selection == 'Solution Overview':
     main()
